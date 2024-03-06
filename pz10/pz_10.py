@@ -6,17 +6,17 @@
 #2. в ассортимент магазина Галерея добавить автора Грибоедов.
 #3. какие книги из магазина ДомКниги отсутствуют в магазине Галерея.
 
-magistr = {"Лермонтов", "Достоевский", "Пушкин", "Тютчев"}
-house_books = {"Толстой", "Грибоедов", "Чехов", "Пушкин"}
-bukmarket = {"Пушкин", "Достоевский", "Маяковский"}
-gallery = {"Чехов", "Тютчев", "Пушкин"}
+magistr = {'Лермонтов', 'Достоевский', 'Пушкин', 'Тютчев'}
+house_books = {'Толстой', 'Грибоедов', 'Чехов', 'Пушкин'}
+bukmarket = {'Пушкин', 'Достоевский', 'Маяковский'}
+gallery = {'Чехов', 'Тютчев', 'Пушкин'}
 
-cant_purchase = [magazine for magazine, books in {"magistr": magistr, "house_books": house_books, "bukmarket": bukmarket, "gallery": gallery}.items()
-    if not "Достоевский" in books or not "Пушкин" in books]
-print("Магазины, где нельзя приобрести книги Достоевского и Пушкина одновременно:", cant_purchase)
+cant_purchase = [magazine for magazine, books in {'magistr': magistr, 'house_books': house_books, 'bukmarket': bukmarket, 'gallery': gallery}.items()
+    if not 'Достоевский' in books or not 'Пушкин' in books]
+print('Магазины, где нельзя приобрести книги Достоевского и Пушкина одновременно:', cant_purchase)
 
-gallery.add("Грибоедов")
-print("Новый ассортимент магазина галерея:", gallery)
+gallery.add('Грибоедов')
+print('\nНовый ассортимент магазина галерея:', gallery)
 
 missing_books = house_books - gallery
-print("Книги отсутствующие в магазине галерея:", missing_books)
+print('\nКниги отсутствующие в магазине галерея:', missing_books)
